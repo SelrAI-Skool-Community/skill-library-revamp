@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["skill", "dims"],
+    "additionalProperties": false,
+    "properties": {
+      "skill": { "type": "string", "description": "dirname of the skill" },
+      "dims": {
+        "type": "object",
+        "required": ["description_discipline", "body_economy", "form_matches_failure", "progressive_disclosure", "evidence_reality", "freshness"],
+        "additionalProperties": false,
+        "properties": {
+          "description_discipline": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "body_economy": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "form_matches_failure": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "progressive_disclosure": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "evidence_reality": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "freshness": { "type": "integer", "minimum": 0, "maximum": 3 }
+        }
+      },
+      "notes": {
+        "type": "object",
+        "description": "one-line note per dim scored <=1; key = dim name",
+        "additionalProperties": { "type": "string" }
+      },
+      "worst_quote": { "type": "string", "description": "verbatim quote from the skill evidencing the worst dim" }
+    }
+  }
+}

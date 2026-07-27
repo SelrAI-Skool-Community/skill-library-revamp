@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# {slug} smoke test.
+# Verifies the skill's evidence layer is in place + SKILL.md is valid.
+set -u
+
+FAILS=0
+ok()   {{ echo "PASS: $1"; }}
+fail() {{ echo "FAIL: $1"; FAILS=$((FAILS+1)); }}
+warn() {{ echo "WARN: $1"; }}
+
+SCRIPT_DIR="$(cd "$(dirname "${{BASH_SOURCE[0]}}")" && pwd)"
+SKILL_DIR="$SCRIPT_DIR/.."
+
+echo "== {slug} smoke =="
+echo ""
+
+# 1. SKILL.md present + has frontmatter
+if [[ -s "$SKILL_DIR/SKILL.md" ]]; then
+  if head -5 "$SKILL_DIR/SKILL.md" | grep -q "^name: {slug}"; then
+    ok "SKILL.md present with valid frontmatter"
+  else
+    fail "SKILL.md missing or malformed frontmatter"
+  fi
+else
+  fail "SKILL.md missing"
+fi
+
+# 2. Evidence layer present
+for f in SETUP-PROMPT.md CHANGELOG.md; do
+  if [[ -s "$SKILL_DIR/$f" ]]; then
+    ok "$f present"
+  else
+    fail "$f missing"
+  fi
+done
+
+if [[ -d "$SKILL_DIR/examples" ]] && ls "$SKILL_DIR/examples"/*.md >/dev/null 2>&1; then
+  ok "examples/ present with .md files"
+else
+  fail "examples/ missing or empty"
+fi
+
+# 3. Description has trigger phrases
+desc=$(awk '/^description:/{{flag=1}} /^---/{{if(flag>1) exit; flag++}} flag==1' "$SKILL_DIR/SKILL.md" | head -3)
+if echo "$desc" | grep -qiE 'use when|trigger|says|paste'; then
+  ok "description has use-when clause"
+else
+  warn "description lacks explicit use-when clause"
+fi
+
+echo ""
+if [[ $FAILS -eq 0 ]]; then
+  echo "SMOKE PASS"
+  exit 0
+fi
+echo "SMOKE FAIL ($FAILS check(s) failed)"
+exit 1

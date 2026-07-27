@@ -1,0 +1,17 @@
+# client-facing-prefixes.txt — skills whose output a customer sees, so rewrites need
+# a high-taste model and an orchestrator read, never a cheap-model draft.
+# One skill DIRNAME PREFIX per line, matched with startswith (so `email-` catches
+# `email-sequence`, `email-marketing`, ...). Blank lines and # comments are ignored.
+#
+# This file MUST NOT be empty — assign_client_facing.py errors on an empty list.
+# Library with no client-facing skills? Keep the dummy prefix below: nothing starts
+# with `zzz-none-`, so every skill is flagged client_facing=false and the stage passes.
+zzz-none-
+
+# Delete the dummy above and uncomment/extend once you know the library, e.g.:
+# carousel-
+# email-
+# content-
+# copywriting
+# brandkit
+# humanizer

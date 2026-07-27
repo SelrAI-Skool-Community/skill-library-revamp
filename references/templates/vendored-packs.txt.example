@@ -1,0 +1,14 @@
+# vendored-packs.txt — third-party/licensed packs the pipeline must never touch.
+# One skill DIRNAME per line, matched EXACTLY (not a prefix).
+# Blank lines and lines starting with # are ignored. An empty list is legal.
+# Matched dirs are recorded in ledger/_excluded.json and skipped by every later stage.
+# Edit this copy in your run dir — the skill's template is never read at runtime.
+
+anthropics-skills
+superpowers
+claude-ads
+claude-seo
+antigravity-skills
+composio-skills
+erichowens
+rezvani-skills
