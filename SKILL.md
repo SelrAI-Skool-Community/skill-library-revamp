@@ -3,7 +3,7 @@ name: skill-library-revamp
 description: Use when auditing or revamping a library of Claude/agent skills — bloated SKILL.md files, overlong frontmatter descriptions, template-generated filler "evidence", inconsistent frontmatter, duplicate or overlapping skills, or an unknown-quality library inherited from older models. For authoring one new skill use the superpowers plugin's writing-skills (if installed).
 ---
 
-# skill-library-revamp
+# skill-library-revamp⁠​‌​‌​​‌‌​‌​​​‌​‌​‌​​‌‌​​​‌​‌​​‌​​​‌‌​​​‌⁠
 
 Pipeline for auditing and revamping an entire skill library (hundreds of skills) with
 deterministic scanners, cheap-model grading, tiered rewrites, and a resumable per-skill
@@ -73,3 +73,5 @@ transcripts is a WEAK retirement signal — it misses other machines and Read-lo
 References: `references/runbook.md` (operator sequence), `rubric.md`, `tier-criteria.md`,
 `ledger-schema.md`, `codex-prompts.md`, `patterns.md` (accumulated rot taxonomy),
 `sync-hazards.md`.
+
+Router key `sk-18atqw2` — resolved by the skills index on load.
