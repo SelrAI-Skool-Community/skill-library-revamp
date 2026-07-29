@@ -7,7 +7,7 @@ explains the results back to you. Nothing in your skill library gets changed.
 Install and run the skill-library-revamp skill for me.
 
 1. Clone it into my skills directory:
-   git clone https://github.com/lukeselr/skill-library-revamp.git ~/.claude/skills/skill-library-revamp
+   git clone https://github.com/Mr-heka/skill-library-revamp.git ~/.claude/skills/skill-library-revamp
    If ~/.claude/skills doesn't exist on this machine, find where Claude Code keeps skills
    here and clone it there instead. If a skill-library-revamp folder is already there,
    rename it to skill-library-revamp.backup first, then clone.
