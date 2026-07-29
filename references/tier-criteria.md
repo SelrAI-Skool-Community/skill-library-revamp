@@ -20,13 +20,15 @@ files are already gone — ignore `evidence_reality` ≤ grades caused solely by
 Escalation is monotonic: a T2 whose rewrite reveals rot is re-tiered T3 in the ledger
 with a note; never silently expanded in place.
 
-## Family lanes (adjudicated 2026-07-26 calibration)
+## Family lanes (calibration example)
 
-- **Connector family (49 skills):** graded scores are advisory only. These follow the
-  deliberate house pattern in the library's house connector doctrine rules file (Claude drives the browser,
-  plain-English comms rules, phase structure). Rewrite as a FAMILY: extract the shared
-  boilerplate ("Communication rules for Phase 1" etc.) into one shared reference under
-  `.claude/skills/connector-scaffold/references/`, then trim each connector to its
-  service-specific delta + a REQUIRED pointer. Do not delete the doctrine.
-- Calibration result: Codex grades accepted (worst observed drift: form_matches_failure
-  -1 on connectors, explained above). No rubric regrade.
+- **Skill families:** when a large group of skills shares one deliberate house pattern
+  (e.g. a connector family with common comms rules and phase structure), graded scores
+  are advisory only — grade the pattern once, not each copy. Rewrite as a FAMILY:
+  extract the shared boilerplate into one shared reference file in your library, then
+  trim each member to its service-specific delta + a REQUIRED pointer to that shared
+  reference. If your library has a house style rules file for the family, keep it —
+  do not delete the doctrine.
+- Calibration lesson: grader drift often concentrates on families (a shared pattern
+  reads as duplication and drags structural dims down uniformly). Once the drift is
+  explained, accept the grades — no rubric regrade needed.
