@@ -12,7 +12,7 @@ files are already gone — ignore `evidence_reality` ≤ grades caused solely by
 | Tier | Criteria (first match wins, evaluated top-down) | Action |
 |---|---|---|
 | T0 skip | excluded at inventory (vendored pack, symlink, retired) | none |
-| T4 retire/merge | confirmed semantic twin (overlap ≥0.55 AND adjudicator confirms same job), OR superseded per freshness note naming a live replacement | skill-hygiene git-mv + ledger; merges fold unique content into survivor. NEVER auto — always adjudicated, batch to the library owner |
+| T4 retire/merge | confirmed semantic twin (overlap ≥0.55 AND adjudicator confirms same job), OR superseded per freshness note naming a live replacement | git-mv into the library's retired dir + ledger row; merges fold unique content into survivor. NEVER auto — always adjudicated, batch to the library owner |
 | T3 full rewrite | a STRUCTURAL dim (form_matches_failure or progressive_disclosure) ≤1 AND ≥2 core dims ≤1, OR prohibition_density >0.8 AND form_matches_failure ≤1, OR lines >600 without reference-file structure (has_references_dir=false). Recalibrated 2026-07-26: desc+body-only lowness routes to T2 | full rewrite per writing-skills; client_facing → orchestrator writes; technical → Codex proposal + orchestrator review |
 | T2 desc+trim | desc_chars >700, OR desc_workflow_summary, OR description_discipline ≤1, OR any number of non-structural dims ≤1 | Codex-drafted description rewrite + targeted trim; batch diff review before apply |
 | T1 mechanical-only | everything else (all dims ≥2, desc ≤700) | Phase B fixes only — done |
@@ -23,7 +23,7 @@ with a note; never silently expanded in place.
 ## Family lanes (adjudicated 2026-07-26 calibration)
 
 - **Connector family (49 skills):** graded scores are advisory only. These follow the
-  deliberate house pattern in `the library's house connector doctrine (rules file)` (Claude drives the browser,
+  deliberate house pattern in the library's house connector doctrine rules file (Claude drives the browser,
   plain-English comms rules, phase structure). Rewrite as a FAMILY: extract the shared
   boilerplate ("Communication rules for Phase 1" etc.) into one shared reference under
   `.claude/skills/connector-scaffold/references/`, then trim each connector to its

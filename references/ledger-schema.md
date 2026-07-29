@@ -5,7 +5,7 @@
 # Spec: Phase A scan scripts for the skill-library-revamp pipeline
 
 Build 7 Python 3 scripts (stdlib only, no pip installs) in
-`the skill's scripts/ directory`.
+the skill's `scripts/` directory.
 They are the deterministic scan layer of a 615-skill revamp pipeline and will later ship
 as a reusable team skill, so: **zero hardcoded paths** — every script takes
 `--root <skills-dir>` (default `~/.claude/skills`) and `--run-dir <ops-dir>`
